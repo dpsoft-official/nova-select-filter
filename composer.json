@@ -1,0 +1,50 @@
+{
+  "name": "dpsoft/nova-multiselect-filter",
+  "description": "Multiselect filter for Laravel Nova.",
+  "keywords": [
+    "laravel",
+    "nova",
+    "filter",
+    "laravel-nova",
+    "multiselect",
+    "select"
+  ],
+  "authors": [
+    {
+      "name": "Kaspar Rosin",
+      "email": "kaspar.rosin@gmail.com",
+      "role": "Developer"
+    },
+    {
+      "name": "Tarvo Reinpalu",
+      "email": "tarvoreinpalu@gmail.com",
+      "role": "Developer"
+    },
+    {
+      "name": "Optimist Digital",
+      "email": "info@optimistdigital.com",
+      "role": "Maintainer"
+    }
+  ],
+  "license": "MIT",
+  "require": {
+    "laravel/nova": "^3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Dpsoft\\NovaMultiselectFilter\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Dpsoft\\NovaMultiselectFilter\\FilterServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
