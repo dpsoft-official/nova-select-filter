@@ -27,7 +27,7 @@ class SearchController extends Controller
         if (!Schema::hasColumn($model->getTable(), $column)) {
             return \response()->json([]);
         }
-        $query = $modelClass::query();
+        $query = $modelClass::query()->latest();
         $query->where($column, 'LIKE', '%'.$term.'%');
         $results = $query->limit(50)->get();
         $options = $results->map(function ($row) use ($column) {

@@ -195,11 +195,13 @@ export default {
 }
 .multiselect__tags{
   padding: 8px 8px 0 40px;
+  font-size: 13px;
 }
 .multiselect__tag{
   padding: 4px 10px 4px 26px;
   margin-left: 10px;
   margin-right: unset;
+  background-color: #8A018A;
 }
 .multiselect__tag-icon{
   right:unset;
@@ -217,5 +219,20 @@ export default {
 .multiselect__select:before{
   color:black;
   border-color: #090909 transparent transparent;
+}
+.multiselect__option--highlight,.multiselect__option--highlight:after{
+  background-color: #8A018A;
+}
+.multiselect__spinner:after,.multiselect__spinner:before{
+  border-top-color: #8A018A;
+}
+.multiselect__tag-icon:focus,.multiselect__tag-icon:hover {
+    background:rgb(244, 35, 244);
+}
+.multiselect__tag-icon:after {
+    color:rgb(248, 244, 248);
+}
+.multiselect__element{
+  font-size: 12px;
 }
 </style>
