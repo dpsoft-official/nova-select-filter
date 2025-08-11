@@ -1,4 +1,4 @@
-# Nova Multiselect Filter
+# Nova Multiselect Filter with ajax 
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/dpsoft/nova-multiselect-filter.svg?style=flat-square)](https://packagist.org/packages/dpsoft/nova-multiselect-filter)
 [![Total Downloads](https://img.shields.io/packagist/dt/dpsoft/nova-multiselect-filter.svg?style=flat-square)](https://packagist.org/packages/dpsoft/nova-multiselect-filter)
@@ -55,6 +55,7 @@ class BooksByAuthorFilter extends MultiselectFilter
         return Authors::all()->pluck('name', 'id');
     }
 }
+```
 ### Built-in server-side search endpoint
 
 ```php
@@ -76,9 +77,6 @@ class UsersByRoleFilter extends MultiselectFilter
     }
 }
 ```
-
-```
-
 ### Option groups
 
 Option groups are supported. Their syntax is the same as [Laravel's option group syntax](https://nova.laravel.com/docs/2.0/resources/fields.html#select-field).
@@ -117,15 +115,6 @@ Possible options you can pass to the filter using the option name as a function,
 | `model`        | String          | null       | Fully qualified model class name used by the built-in search endpoint. |
 | `searchColumn` | String          | null       | Column name used by the built-in search endpoint. |
 
-## Localization
-
-The translations file can be published by using the following publish command:
-
-```bash
-php artisan vendor:publish --provider="Dopsoft\NovaMultiselectFilter\FieldServiceProvider" --tag="translations"
-```
-
-You can then edit the strings to your liking.
 
 ## Credits
 
