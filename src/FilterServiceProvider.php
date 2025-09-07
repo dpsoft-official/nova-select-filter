@@ -26,7 +26,6 @@ class FilterServiceProvider extends ServiceProvider
                 'novaMultiselectFilter.nItemsSelected' => ':count آیتم انتخاب شده'
             ]);
             Nova::script('nova-multiselect-filter', __DIR__ . '/../dist/js/filter.js');
-            Nova::script('nova-multiselect-field', __DIR__ . '/../dist/js/field.js');
         });
 
         $this->loadRoutesFrom(__DIR__ . '/../routes/api.php');
