@@ -29,7 +29,8 @@ class SearchController extends Controller
         }
         $query = $modelClass::query()->latest();
         $query->where($column, 'LIKE', '%'.$term.'%');
-        $results = $query->limit(50)->get();
+        $limit = (int) $request->get('limit', 10);
+        $results = $query->limit($limit)->get();
         $options = $results->map(function ($row) use ($column) {
             return [
                 'label' => (string) $row->{$column},

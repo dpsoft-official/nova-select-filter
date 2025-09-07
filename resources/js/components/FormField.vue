@@ -140,10 +140,12 @@ export default {
       const method = (this.field.ajaxMethod || 'get').toLowerCase();
       const endpoint = this.field.ajaxEndpoint || '/nova-vendor/nova-multiselect-filter/search';
       const paramKey = this.field.ajaxParam || 'search';
+      const limit = this.field.limit || 10;
       this.debounceTimer = setTimeout(async () => {
         try {
           const params = {};
           params[paramKey] = query;
+          params['limit'] = limit;
           if (this.field.model) params.model = this.field.model;
           if (this.field.searchColumn) params.column = this.field.searchColumn;
           let response;

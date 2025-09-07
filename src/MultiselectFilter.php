@@ -129,6 +129,11 @@ abstract class MultiselectFilter extends Filter
         return $this->withMeta(['searchColumn' => (string)$column]);
     }
 
+    public function limit($limit)
+    {
+        return $this->withMeta(['limit' => (int)$limit]);
+    }
+
     /**
      * Formats the options available for select.
      *

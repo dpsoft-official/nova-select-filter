@@ -97,4 +97,9 @@ class MultiselectField extends Field
     {
         return $this->withMeta(['searchColumn' => (string)$column]);
     }
+
+    public function limit($limit)
+    {
+        return $this->withMeta(['limit' => (int)$limit]);
+    }
 }
