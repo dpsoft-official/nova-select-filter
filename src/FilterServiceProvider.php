@@ -18,14 +18,15 @@ class FilterServiceProvider extends ServiceProvider
     {
         Nova::serving(function (ServingNova $event): void {
             Nova::translations([
-                'novaMultiselectFilter.maxElements' => 'بیشتر از :max انتخاب شده است.',
+                'novaMultiselectFilter.maxElements' => 'بیشترین تعداد انتخاب شده است.',
                 'novaMultiselectFilter.noResult' => 'نتیجه ای یافت نشد.',
-                'novaMultiselectFilter.noOptions' => 'لیست خالی است.',
+                'novaMultiselectFilter.noOptions' => 'لیست خالی است، جستجو کنید.',
                 'novaMultiselectFilter.limitText' => 'و :count بیشتر',
                 'novaMultiselectFilter.placeholder' => 'انتخاب گزینه(ها)',
                 'novaMultiselectFilter.nItemsSelected' => ':count آیتم انتخاب شده'
             ]);
             Nova::script('nova-multiselect-filter', __DIR__ . '/../dist/js/filter.js');
+            Nova::script('nova-multiselect-field', __DIR__ . '/../dist/js/field.js');
         });
 
         $this->loadRoutesFrom(__DIR__ . '/../routes/api.php');

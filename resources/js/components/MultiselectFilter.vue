@@ -36,15 +36,15 @@
         deselectGroupLabel=""
       >
         <template slot="maxElements">
-          {{ __('novaMultiselectFilter.maxElements', { max: String(filter.max || '') }) }}
+          <span style="color: tomato;font-size: 12px;">{{ __('novaMultiselectFilter.maxElements', { max: String(filter.max || '') }) }}</span>
         </template>
 
         <template slot="noResult">
-          {{ __('novaMultiselectFilter.noResult') }}
+          <span style="color: #7c858e;font-size: 12px;">{{ __('novaMultiselectFilter.noResult') }}</span>
         </template>
 
         <template slot="noOptions">
-          {{ __('novaMultiselectFilter.noOptions') }}
+          <span style="color: #7c858e;font-size: 12px;">{{ __('novaMultiselectFilter.noOptions') }}</span>
         </template>
       </multiselect>
     </div>

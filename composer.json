@@ -1,6 +1,6 @@
 {
   "name": "dpsoft/nova-multiselect-filter",
-  "description": "Multiselect filter for Laravel Nova.",
+  "description": "Multiselect filter and field for Laravel Nova.",
   "keywords": [
     "laravel",
     "nova",
@@ -10,6 +10,11 @@
     "select"
   ],
   "authors": [
+    {
+      "name": "Dpsoft",
+      "email": "info@dpsoft.ir",
+      "role": "Developer"
+    },
     {
       "name": "Kaspar Rosin",
       "email": "kaspar.rosin@gmail.com",
