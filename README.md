@@ -15,16 +15,7 @@ This [Laravel Nova](https://nova.laravel.com) package adds a multiselect to Nova
 - Single select
 - Group select
 - Search
-
-## Screenshots
-
-### Multiselect
-
-![Multiselect](docs/multiselect.gif)
-
-### Groupselect
-
-![Groupselect](docs/groupselect.gif)
+- Filter and Field
 
 ## Installation
 
@@ -83,6 +74,8 @@ public function fields(Request $request)
             ->max(3), // Maximum 3 selections
     ];
 }
+```
+
 ### Built-in server-side search endpoint
 
 ```php
@@ -141,10 +134,10 @@ Possible options you can pass to the filter using the option name as a function,
 | `minChars`     | Number          | 0          | Minimum characters before search triggers. |
 | `model`        | String          | null       | Fully qualified model class name used by the built-in search endpoint. |
 | `searchColumn` | String          | null       | Column name used by the built-in search endpoint. |
-
+| `limit`        | Number          | null       | The number of options to return from a server-side search. |
 
 ## Credits
-
+- [Dpsoft](https://github.com/dpsoft-official)
 - [Kaspar Rosin](https://github.com/kasparrosin)
 - [Tarvo Reinpalu](https://github.com/Tarpsvo)
 - [shentao/vue-multiselect](https://github.com/shentao/vue-multiselect)
